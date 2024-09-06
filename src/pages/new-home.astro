@@ -1,0 +1,245 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'WiseRaja - A blog on stock market and investing, for beginners.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- <Fragment slot="announcement"></Fragment> -->
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'WiseNotes', href: '#blog' },
+      ]}
+      actions={[
+        {
+          text: 'Join the WiseTribe',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="WiseRaja by Rajesh Samalla"
+    tagline="A blog for beginners."
+    actions={[{ variant: 'primary', text: 'Join the WiseTribe', href: getPermalink('/blog') }]}
+  >
+    <Fragment slot="subtitle">
+      Get the missing knowledge about the stock market, investing, and how to manage your personal finance. Really
+      achieve financial freedom.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-whatsapp',
+        callToAction: {
+          target: '_blank',
+          text: 'WhatsApp',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:brand-telegram',
+        callToAction: {
+          target: '_blank',
+          text: 'Telegram',
+          href: 'https://t.me/equityhouse',
+        },
+      },
+    ]}
+    image={{
+      src: '~/assets/images/raghavendra-v-konkathi-8m3FMEjqvyg-unsplash.jpg',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About WiseRaja</h2>
+      <p class="dark:text-white">
+        Welcome to my knowledge-base. I commit to bring ideas to your life, where each idea has a positive impact on
+        your financial life.
+      </p>
+      <br />
+      <p class="dark:text-white">
+        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
+        details of typography, or the vibrant hues of nature during my outdoor escapades.
+      </p>
+      <br />
+      <p class="dark:text-white">
+        If you're curious to improve your personal finance and move towards financial freedom, join the tribe on these
+        platforms:
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-yellow-50 dark:bg-yellow-900"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Topics of Finance & Investing"
+    subtitle="Discover the financial knowledge that will help you become financially free."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Stock Insights, Patterns & Trends',
+        description:
+          "A layman's view about the stock, and its fundamentals. Understand the various patterns & trends, and how to make your own analysis.",
+      },
+      {
+        title: 'Sectorial Knowledge',
+        description:
+          'Understand how the sectors work, and when to invest in them. Learn about the best funds and stocks in the sector.',
+      },
+      {
+        title: 'Mutual Funds & SIP',
+        description:
+          'What are mutual funds, how to choose the right fund, how to start an SIP, and how to read the offer document carefully before investing.',
+      },
+      {
+        title: 'Trading Psychology',
+        description: 'Thinking about money, how to control your emotions while trading.',
+      },
+      {
+        title: 'Technical Analysis',
+        description: 'Learn various technical analysis methods, tools and how to use them to your advantage.',
+      },
+      {
+        title: 'Personal Finance',
+        description:
+          'How to manage your personal finance, budgeting techniques, how to save taxes, and how to make your money work for you.',
+      },
+      {
+        title: 'Free Resources & Tools',
+        description:
+          'Download free resources and tools to help you become financially free, and learn to use them to your advantage.',
+      },
+      {
+        title: 'Access to the WiseTribe community',
+        description:
+          'Interact with a community of like-minded people, who are on the same journey to become financially free. Never feel alone.',
+      },
+      {
+        title: 'and more...',
+        description:
+          'Join the tribe to get access to all the knowledge, resources and tools to become financially free, today.',
+      },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="WiseTribe Testimonials"
+    subtitle="Discover what other tribe members have to say about their experiences working with WiseRaja."
+    testimonials={[
+      {
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Mark Thompson',
+        job: 'Creative director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
+      },
+      {
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Emily Martinez',
+        job: 'CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: 'Emily Martinez Image',
+        },
+      },
+      {
+        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        name: 'Laura Simmons',
+        job: 'Founder of an NGO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Laura Simmons Image',
+        },
+      },
+      {
+        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
+        name: 'Ashish Chodankar',
+        job: 'Software Engineer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Ashish Chodankar Image',
+        },
+      },
+      {
+        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
+        name: 'Abhijit Kharade',
+        job: 'Software Engineer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
+          alt: 'Abhijit Kharade Image',
+        },
+      },
+      {
+        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
+        name: 'Michael Carter',
+        job: 'Event Coordinator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Michael Carter Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="WiseNotes"
+    information={`Everything you ever need to know about Stock Market Investing & Personal Finance. Especially for beginners.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-yellow-50 dark:bg-yellow-900"></div>
+    </Fragment>
+  </BlogLatestPosts>
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Become wise about your finances."
+    subtitle="Ready to transform your financial problems into financial freedom?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Join the WiseTribe',
+        href: '/',
+      },
+    ]}
+  />
+</Layout>
