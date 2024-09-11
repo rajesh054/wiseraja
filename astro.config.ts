@@ -25,6 +25,7 @@ export default defineConfig({
   output: 'static',
   site: 'https://rajesh054.github.io',
   base: '/wiseraja',  // Note the leading slash
+  trailingSlash: 'never',
 
   integrations: [
     tailwind({
