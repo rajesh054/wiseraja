@@ -56,8 +56,8 @@ export const footerData = {
     {
       title: 'WiseRaja',
       links: [
-        { text: 'About', href: '/new-home#about' },
-        { text: 'Blog', href: '#' },
+        { text: 'About', href: getPermalink('/new-home#about') },
+        { text: 'Blog', href: getPermalink('/blog') },
         { text: 'Shop', href: '#' },
         { text: 'Team', href: '#' },
         { text: 'WiseTribe on WhatsApp', href: '#' },

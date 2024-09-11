@@ -20,9 +20,9 @@ const metadata = {
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'WiseNotes', href: '#blog' },
+        { text: 'Home', href: getPermalink('/new-home') },
+        { text: 'About', href: getPermalink('/new-home#about') },
+        { text: 'WiseNotes', href: getPermalink('/blog') },
       ]}
       actions={[
         {
