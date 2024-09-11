@@ -24,7 +24,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
   site: 'https://rajesh054.github.io',
-  base: 'wiseraja',
+  base: '/wiseraja',  // Note the leading slash
 
   integrations: [
     tailwind({
