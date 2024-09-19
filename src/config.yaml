@@ -1,7 +1,7 @@
 site:
   name: WiseRaja
-  site: 'https://rajesh054.github.io'
-  base: '/wiseraja'
+  site: 'https://wiseraja.com'
+  base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: false
