@@ -1,0 +1,27 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Courses Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Pre-launch"
+    title="Courses by WiseRaja"
+    subtitle="I'm developing some finance courses for you to grow your knowledge and make better decisions."
+    actions={[
+      { variant: 'primary', text: 'Be the first to know', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1613870948964-7125fa3e1aab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Room with a Recording sign. Pre-launch Courses Page',
+    }}
+  />
+</Layout>

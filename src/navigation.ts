@@ -4,41 +4,41 @@ export const headerData = {
   links: [
     {
       text: 'Home',
-      href: getPermalink('/new-home'),
+      href: getPermalink('/'),
     },
     {
       text: 'About',
-      href: getPermalink('/new-home#about'),
+      href: getPermalink('/#about'),
     },
     {
       text: 'WiseNotes',
       href: getPermalink('/blog'),
     },
-    {
-      text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
-    },
+    // {
+    //   text: 'Blog',
+    //   links: [
+    //     {
+    //       text: 'Blog List',
+    //       href: getBlogPermalink(),
+    //     },
+    //     {
+    //       text: 'Article',
+    //       href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+    //     },
+    //     {
+    //       text: 'Article (with MDX)',
+    //       href: getPermalink('markdown-elements-demo-post', 'post'),
+    //     },
+    //     {
+    //       text: 'Category Page',
+    //       href: getPermalink('tutorials', 'category'),
+    //     },
+    //     {
+    //       text: 'Tag Page',
+    //       href: getPermalink('astro', 'tag'),
+    //     },
+    //   ],
+    // },
   ],
   actions: [{ text: 'Join the WiseTribe', href: '#', target: '_blank' }],
 };
@@ -48,15 +48,14 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'Courses', href: '#' },
-        { text: 'Templates', href: '#' },
-        { text: 'Other Resources', href: '#' },
+        { text: 'Courses', href: '/courses' },
+        { text: 'Templates', href: '/templates' },
       ],
     },
     {
       title: 'WiseRaja',
       links: [
-        { text: 'About', href: getPermalink('/new-home#about') },
+        { text: 'About', href: getPermalink('/#about') },
         { text: 'Blog', href: getPermalink('/blog') },
         { text: 'Shop', href: '#' },
         { text: 'Team', href: '#' },
